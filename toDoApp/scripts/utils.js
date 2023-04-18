@@ -41,7 +41,7 @@ function validarEmail(e) {
 
     console.log(field);
 
-    if (fieldValue.length > 3 && !regex.test(fieldValue)) { // si el correo ingresado es mayor a 3 caracteres y supera el regex pongo el error
+    if (fieldValue.length < 4 || !regex.test(fieldValue)) { // si el correo ingresado es mayor a 3 caracteres y supera el regex pongo el error
         setErrors(`🚨 Por favor ingrese un ${field.name} válido`,field)
     } else {
         setErrors("", field, false)
