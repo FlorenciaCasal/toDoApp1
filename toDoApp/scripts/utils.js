@@ -56,7 +56,7 @@ function normalizarEmail(email) {
 function validarContrasenia(e) {
     const field = e.target
     const fieldValue = normalizarTexto(field.value)
-    // const regex = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
+  //  const regex = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
 
     console.log(field);
 

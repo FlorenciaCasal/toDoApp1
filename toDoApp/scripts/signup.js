@@ -16,7 +16,7 @@ window.addEventListener('load', function () {
     form.addEventListener('submit', function (event) {
       event.preventDefault()
     //   if (inputPassword !== inputPasswordRepetida) {
-    //     return {msg: "Las contraseñas nos coinciden"}
+    //     return {msg: "Las contraseñas no coinciden"}
     //   }
     //   Creamos el cuerpo de la request
     const payload = {
@@ -25,6 +25,13 @@ window.addEventListener('load', function () {
         email: inputEmail.value,
         password: inputPassword.value
     }
+
+if(validarEmail(payload.email)===false) {
+        return;
+    }
+
+
+    normalizarEmail(payload.email);
     // Configuramos la request del fetch
      const settings = {
         method: "POST",
