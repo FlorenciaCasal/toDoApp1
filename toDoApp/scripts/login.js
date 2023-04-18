@@ -20,8 +20,8 @@ window.addEventListener('load', function () {
         ev.preventDefault()
         console.log("Preparando datos");
         const datos = {
-            email: normalizarEmail.validarEmail(inputEmail.value),
-            password: normalizarTexto.validarContrasenia(inputPassword.value )
+            email: validarEmail(inputEmail.value),
+            password: validarContrasenia(inputPassword.value )
         }
         console.log(datos);
         realizarLogin( datos )
